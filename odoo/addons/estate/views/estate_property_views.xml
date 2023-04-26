@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<odoo><data>
+
+    <record id="estate_action" model="ir.actions.act_window">
+        <field name="name">Estate action</field>
+        <field name="res_model">estate.model</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+    <!-- MAIN MENU -->
+    <menuitem name="Estates"
+        id="estate_main_menu"
+        sequence="10"
+        web_icon="estate,static/description/icon.svg"/>
+
+    <!-- HEADER: EVENTS -->
+    <menuitem name="Estates"
+        id="menu_estate_estate"
+        sequence="1"
+        action="estate_action"
+        parent="estate.estate_main_menu"/>
+
+    <!-- HEADER: REPORTING -->
+    <menuitem name="Reporting"
+        id="menu_reporting_estates"
+        sequence="50"
+        parent="estate_main_menu"/>
+
+    <!-- HEADER: CONFIGURATION -->
+    <menuitem name="Configuration"
+        id="menu_estate_configuration"
+        sequence="99"
+        parent="estate_main_menu"/>
+    <menuitem name="Estate Templates"
+        id="menu_estate_type"
+        sequence="1"
+        parent="menu_estate_configuration"/>
+    <menuitem name="Estate Stages"
+        id="estate_stage_menu"
+        sequence="2"
+        parent="menu_estate_configuration"/>
+    <menuitem name="Mail Schedulers"
+        id="menu_estate_mail_schedulers"
+        sequence="10"
+        parent="menu_estate_configuration"/>
+    <menuitem name="Estate Tags Categories"
+        id="menu_estate_category"
+        sequence="3"
+        parent="menu_estate_configuration"/>
+
+</data></odoo>
