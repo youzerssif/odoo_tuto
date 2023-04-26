@@ -1,0 +1,8 @@
+ix94-4ih2-5jwe
+
+psql -U postgres -c 'show hba_file'
+
+python3 odoo-bin -d odoo14 --db_user=odoo --db_password=odoo
+
+Create odoo module
+python3 odoo-bin scaffold your_module_name addons/...
